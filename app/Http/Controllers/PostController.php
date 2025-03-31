@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreRequest;
+use App\Http\Requests\UpdateRequest;
 
 class PostController extends Controller
 {
@@ -78,7 +79,7 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         $post = Post::findOrFail($id);
     
